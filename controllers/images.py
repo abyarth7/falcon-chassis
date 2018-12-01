@@ -1,6 +1,5 @@
-import json
 import falcon
-
+import json
 from logger import set_up_logging
 logger = set_up_logging()
 
