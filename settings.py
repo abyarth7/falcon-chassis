@@ -1,0 +1,1 @@
+DB_URL = 'postgresql://pgresuser:pgres123321#@localhost:5432/orders'

@@ -15,7 +15,6 @@ import sys
 
 
 def set_up_logging():
-    print("set up logger hit")
     file_path = sys.modules[__name__].__file__
     project_path = os.path.dirname(file_path)
     log_location = project_path + '/logs/'    
@@ -27,7 +26,6 @@ def set_up_logging():
     file_name = current_date + '.log'
     file_location = log_location + file_name
     with open(file_location, 'a+'):
-        print("trying to log")
         logger = logging.getLogger(__name__)
         format = '[%(asctime)s] [%(levelname)s] [{%(pathname)s:%(lineno)d} [%(process)d][ Details :  %(message)s]]'
         logging.basicConfig(format=format, filemode='a+', filename=file_location, level=logging.DEBUG)
