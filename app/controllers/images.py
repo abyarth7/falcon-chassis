@@ -10,9 +10,6 @@ conn = DBConnect()
 class Resource(object):
     def on_get(self, req, resp):
         try:
-            result = conn.query("select name from company")
-            for row in result:
-                print("username:", row['name'])
             image_name = "testing image"
             logger.info("Image Server with image name : {}".format(image_name))
             doc = {
